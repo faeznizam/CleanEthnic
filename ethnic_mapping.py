@@ -71,6 +71,7 @@ def categorize_ethnic(name):
 
 df['Ethnic'] = df['Full Name'].apply(categorize_ethnic)
 
+# Check progress and distinct in ethnics
 def check_progress():
   blank_rows = len(df[df['Ethnic'].isnull() | df['Ethnic'].eq('')])
   non_blank_rows = len(df[~df['Ethnic'].isnull() & ~df['Ethnic'].eq('')])
@@ -88,6 +89,5 @@ def check_progress():
 
 check_progress()
 
-# Check distinct in ethnics
 
 # save and download the file
